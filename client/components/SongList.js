@@ -33,4 +33,14 @@ class SongList extends Component {
   }
 }
 
-export default graphql(fetchSongs)(SongList);
+const deleteSongMutation = gql`
+  mutation DeleteSong($id: ID) {
+    deleteSong(id: $id) {
+      id
+    }
+  }
+`;
+
+export default graphql(deleteSongMutation)(
+  graphql(fetchSongs)(SongList)
+);
