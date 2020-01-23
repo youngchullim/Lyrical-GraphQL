@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import fetchSong from '../queries/fetchSong';
 
 class SongDetail extends Component {
   render() {
