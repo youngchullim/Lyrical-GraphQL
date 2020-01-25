@@ -16,7 +16,7 @@ class LyricCreate extends Component {
 
     this.props.mutate({
       variables: {
-        content: this.state.conent,
+        content: this.state.content,
         songId: this.props.songId
       }
     });
@@ -46,4 +46,4 @@ const createLyricMutation = gql`
   }
 `;
 
-export default LyricCreate;
+export default graphql(createLyricMutation)(LyricCreate);
