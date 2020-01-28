@@ -42,6 +42,7 @@ const createLyricMutation = gql`
       lyrics {
         id
         content
+        likes
       }
     }
   }
